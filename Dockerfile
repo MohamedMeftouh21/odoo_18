@@ -85,12 +85,11 @@ COPY ./odoo.conf /etc/odoo/
 COPY wait-for-psql.py /usr/local/bin/
 
 # Set permissions and Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
-RUN chown odoo /etc/odoo/odoo.conf \
-    && chmod +x /entrypoint.sh \
-    && chown odoo /usr/local/bin/wait-for-psql.py \
-    && chmod +x /usr/local/bin/wait-for-psql.py \
-    && mkdir -p /mnt/extra-addons \
-    && chown -R odoo /mnt/extra-addons
+RUN chmod +x /entrypoint.sh && \
+    chmod +x /usr/local/bin/wait-for-psql.py && \
+    chown odoo /etc/odoo/odoo.conf && \
+    mkdir -p /mnt/extra-addons && \
+    chown -R odoo /mnt/extra-addons
 
 VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
@@ -103,7 +102,6 @@ ENV ODOO_RC /etc/odoo/odoo.conf
 
 # Set default user when running the container
 USER odoo
-RUN chmod +x entrypoint.sh
 
-ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["odoo"]

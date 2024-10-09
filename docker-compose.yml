@@ -1,7 +1,7 @@
 services:
   
   web:
-    image: mohamedmeftouh/odoo18:1
+    build: .
     depends_on:
       - db
     ports:
