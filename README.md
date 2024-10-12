@@ -21,3 +21,21 @@ Voici les étapes clés pour convertir le code source d'Odoo 18 en image Docker 
                             docker build -t odoo18 .
  pour créer l'image, puis testez-la avec docker run.
 
+### Voici les étapes clés pour résoudre une erreur de création de base de données avec Docker Compose :
+
+#1 - Accéder au conteneur :
+
+          docker-compose run web bash
+2# Créer la base de données :
+
+      odoo --init base --database odoo --stop-after-init --db_host=database --db_user=odoo --db_password=strongpass
+
+3# Redémarrer les services :
+
+        docker-compose up -d
+
+
+
+
+
+
