@@ -6,7 +6,7 @@ Voici les étapes clés pour convertir le code source d'Odoo 18 en image Docker 
 
  2. Créer un Dockerfile : Dans le répertoire racine du code source d'Odoo, créez un fichier Dockerfile.
 
- 3. Choisir une image de base : Utilisez une image de base, comme Python ou Debian ou .. , pour exécuter Odoo.
+ 3. Choisir une image de base : Utilisez une image de base, comme Python ou Debian ou ubuntu , pour exécuter Odoo.
 
  4. Copier le code source : Utilisez la commande COPY pour copier le code source d'Odoo dans l'image Docker.
 
