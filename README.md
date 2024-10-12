@@ -1,3 +1,12 @@
 # Converting Odoo 18 source code to a Docker image
 
-Convertir le code source d'Odoo 18 en image Docker implique plusieurs étapes clés. Tout d'abord, assurez-vous d'avoir Docker installé sur votre système. Ensuite, créez un fichier Dockerfile dans le répertoire racine de votre code source Odoo. Le Dockerfile doit commencer par une image de base, telle que Python ou Debian, qui servira à exécuter Odoo. Ensuite, copiez le code source d'Odoo dans l'image en utilisant la commande COPY. Installez les dépendances nécessaires en ajoutant les commandes RUN appropriées pour exécuter des gestionnaires de paquets comme pip ou apt-get. Configurez les paramètres requis, tels que les variables d'environnement et les ports, avec les instructions ENV et EXPOSE. Enfin, spécifiez la commande pour démarrer Odoo à l'aide des instructions CMD ou ENTRYPOINT. Une fois que votre Dockerfile est prêt, construisez l'image Docker en exécutant la commande docker build -t odoo18 . dans le terminal. Après la fin de la construction, vous pouvez exécuter le conteneur avec la commande docker run et les options appropriées pour tester votre nouvelle application Odoo 18 Dockerisée."
+Voici les étapes clés pour convertir le code source d'Odoo 18 en image Docker :
+
+Pré-requis : Assurez-vous que Docker est installé sur votre système.
+Créer un Dockerfile : Dans le répertoire racine du code source d'Odoo, créez un fichier Dockerfile.
+Choisir une image de base : Utilisez une image de base, comme Python ou Debian ou .. , pour exécuter Odoo.
+Copier le code source : Utilisez la commande COPY pour copier le code source d'Odoo dans l'image Docker.
+Installer les dépendances : Ajoutez des commandes RUN pour installer les dépendances via des gestionnaires de paquets comme pip ou apt-get.
+Configurer les variables : Utilisez les instructions ENV et EXPOSE pour définir les variables d'environnement et les ports.
+Démarrer Odoo : Utilisez CMD ou ENTRYPOINT pour spécifier la commande de démarrage d’Odoo.
+Construire et exécuter l'image : Exécutez docker build -t odoo18 . pour créer l'image, puis testez-la avec docker run.
