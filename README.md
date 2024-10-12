@@ -2,7 +2,7 @@
 
 Voici les étapes clés pour convertir le code source d'Odoo 18 en image Docker :
 
-Pré-requis : Assurez-vous que Docker est installé sur votre système.
+ 1. Pré-requis : Assurez-vous que Docker est installé sur votre système.
 
 Créer un Dockerfile : Dans le répertoire racine du code source d'Odoo, créez un fichier Dockerfile.
 
