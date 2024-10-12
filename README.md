@@ -16,5 +16,8 @@ Voici les étapes clés pour convertir le code source d'Odoo 18 en image Docker 
 
  7. Démarrer Odoo : Utilisez CMD ou ENTRYPOINT pour spécifier la commande de démarrage d’Odoo.
 
- 8. Construire et exécuter l'image : Exécutez docker build -t odoo18 . pour créer l'image, puis testez-la avec docker run.
+ 8. Construire et exécuter l'image exécutez :   
+    
+                            docker build -t odoo18 .
+ pour créer l'image, puis testez-la avec docker run.
 
